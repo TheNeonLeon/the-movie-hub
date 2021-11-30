@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Trending from './pages/Trending';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Trending />
+
   </React.StrictMode>,
   document.getElementById('root')
 );
