@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-
+import Badge from '@mui/material/Badge';
+import './Trending.css';
 const Trending = () => {
   const [getData, setData] = useState([]);
 
@@ -22,12 +23,20 @@ const Trending = () => {
 
   return (
     <div className="App">
+      <h1>Trending shows and movies</h1>
       <ul>
         {getData.map(movie => (
           <li key={movie.id}>
+            <Badge badgeContent={movie.vote_average} color="primary"
+            sx={{
+              fontSize: 1.25,
+            }}
+            >
+              </Badge>
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <h3>{movie.title}</h3>
             <p>{movie.overview}</p>
+            <p>{movie.video ? 'click to see trailer' : 'There is no video available'}</p>
           </li>
         ))}
       </ul>
