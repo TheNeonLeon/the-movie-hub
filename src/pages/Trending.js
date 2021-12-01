@@ -8,7 +8,7 @@ const Trending = () => {
   useEffect(() => {
 
   const fetchData = async () => {
-   await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`)
+   await fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_API_KEY}`)
       .then(response => response.json())
       .then(data => { 
           setData(data.results);
@@ -23,10 +23,10 @@ const Trending = () => {
 
   return (
     <div className="App">
-      <h1>Trending shows and movies</h1>
+      <h1>Trending movies</h1>
       <ul>
         {getData.map(movie => (
-          <li key={movie.id}>
+          <li className="trending-list" key={movie.id}>
             <Badge badgeContent={movie.vote_average} color="primary"
             sx={{
               fontSize: 1.25,
@@ -36,7 +36,7 @@ const Trending = () => {
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <h3>{movie.title}</h3>
             <p>{movie.overview}</p>
-            <p>{movie.video ? 'click to see trailer' : 'There is no video available'}</p>
+            <p>{movie.video ? `${movie.video}` : 'There is no video available'}</p>
           </li>
         ))}
       </ul>

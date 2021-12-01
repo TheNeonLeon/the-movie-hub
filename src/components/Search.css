@@ -4,8 +4,6 @@ h1, h2, h3{
 p{
     color: #7e7e7e;
 }
-.trending-list{
+li{
     list-style: none;
-    box-shadow: 0 0 38px rgb(0 0 0 / 75%);
-
 }
