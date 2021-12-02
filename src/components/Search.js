@@ -8,7 +8,7 @@ const SearchShows = () => {
     const [display, setDisplay] = useState(false);
 
     const toggleDisplay = () => {
-        display ? setDisplay(false) : setDisplay(true);
+        setDisplay(display ? false : true);
     }
 
     useEffect(() => {
@@ -37,7 +37,9 @@ const SearchShows = () => {
     <div className="App">
 
         {/* Track the value of input elements with onChange event */}
-        <input placeholder="search..." type="text"  onClick={toggleDisplay} onChange={(e) => setInput(e.target.value)}></input>
+        <input placeholder="search movies..." type="text"  onClick={toggleDisplay} onChange={(e) => setInput(e.target.value)}></input>
+        <p>Toggle search results by clicking the search bar</p>
+        { display ?
         <ul>
         {getData.map(movie => (
             <li key={movie.id}>
@@ -47,12 +49,15 @@ const SearchShows = () => {
             }}
             >
               </Badge>
-            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            {movie.poster_path ? <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} /> : <img src="https://via.placeholder.com/300x450" alt="placeholder" />}
             <h3>{movie.title}</h3>
-
+            <p>{movie.overview}</p>
+            <p>{movie.release_date}</p>
             </li>
                 ))}
         </ul>
+        : null }
+        
     </div>
   );
 }

@@ -37,6 +37,7 @@ const Trending = () => {
             <h3>{movie.title}</h3>
             <p>{movie.overview}</p>
             <p>{movie.video ? `${movie.video}` : 'There is no video available'}</p>
+            <p>{movie.release_date}</p>
           </li>
         ))}
       </ul>

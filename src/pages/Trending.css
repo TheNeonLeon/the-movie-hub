@@ -9,3 +9,9 @@ p{
     box-shadow: 0 0 38px rgb(0 0 0 / 75%);
 
 }
+span{
+    font-size: 25px !important;
+}
+.css-106c1u2-MuiBadge-badge{
+    height: 31px !important;
+}
