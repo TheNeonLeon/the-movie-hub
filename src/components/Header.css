@@ -3,7 +3,7 @@
     min-height: 5vh;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     font-size: calc(10px + 2vmin);
     color: white;
   }
