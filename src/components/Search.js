@@ -45,7 +45,7 @@ const SearchShows = () => {
         { display ?
         <ul className="search-results">
         {getData.map(movie => (
-            <li className="movie-images" key={movie.id}>
+            <li className="search-images" key={movie.id}>
                 <Badge badgeContent={movie.vote_average} color="primary"
             sx={{
               fontSize: 1.25,
