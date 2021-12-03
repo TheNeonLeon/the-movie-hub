@@ -27,12 +27,23 @@ li{
     grid-template-rows: 1fr 1fr;
     gap: 0px 12px;
 }
+#outlined-basic{
+    background-color: white;
+    width: 21rem;
+}
 
 @media screen and (min-width: 600px){
     li{
         margin-right: 25%;
         margin-bottom: 5%;
         margin-left: 25%;
+    }
+    
+}
+@media screen and (max-width: 500px){
+    .trending{
+        display: inherit;
+
     }
     
 }

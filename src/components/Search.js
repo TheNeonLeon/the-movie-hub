@@ -2,6 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './Search.css';
 import { Badge } from '@mui/material';
+import { TextField } from '@mui/material';
+
 const SearchShows = () => {
     const [getData, setData] = useState([]);
     const [input, setInput] = useState('');
@@ -37,7 +39,8 @@ const SearchShows = () => {
     <div className="App">
 
         {/* Track the value of input elements with onChange event */}
-        <input placeholder="search movies..." type="text"  onClick={toggleDisplay} onChange={(e) => setInput(e.target.value)}></input>
+        <TextField id="outlined-basic" label="Search movies..." variant="outlined" onClick={toggleDisplay} onChange={(e) => setInput(e.target.value)} />
+
         <p>Toggle search results by clicking the search bar</p>
         { display ?
         <ul className="search-results">

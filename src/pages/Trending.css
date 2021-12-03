@@ -25,3 +25,10 @@ span{
     grid-template-rows: 1fr 1fr;
     gap: 0px 12px;
 }
+@media screen and (max-width: 500px){
+    .trending{
+        display: inherit;
+
+    }
+    
+}
