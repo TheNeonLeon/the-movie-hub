@@ -15,3 +15,13 @@ span{
 .css-106c1u2-MuiBadge-badge{
     height: 31px !important;
 }
+.movie-images{
+    width: -webkit-fill-available;
+}
+.trending{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 12px;
+}

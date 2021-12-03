@@ -17,12 +17,25 @@ li{
     padding-bottom: 1%;
     
 }
-@media screen and (min-width: 1080px){
+.movie-images{
+    width: -webkit-fill-available;
+}
+.search-results{
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 12px;
+}
+
+@media screen and (min-width: 600px){
     li{
         margin-right: 25%;
         margin-bottom: 5%;
         margin-left: 25%;
     }
+    
 }
+
 
     

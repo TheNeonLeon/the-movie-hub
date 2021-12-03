@@ -24,7 +24,7 @@ const Trending = () => {
   return (
     <div className="App">
       <h1>Trending movies</h1>
-      <ul>
+      <ul className="trending">
         {getData.map(movie => (
           <li className="trending-list" key={movie.id}>
             <Badge badgeContent={movie.vote_average} color="primary"
@@ -33,7 +33,7 @@ const Trending = () => {
             }}
             >
               </Badge>
-            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            <img className="movie-images" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <h3>{movie.title}</h3>
             <p>{movie.overview}</p>
             <p>{movie.video ? `${movie.video}` : 'There is no video available'}</p>

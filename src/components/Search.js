@@ -40,16 +40,16 @@ const SearchShows = () => {
         <input placeholder="search movies..." type="text"  onClick={toggleDisplay} onChange={(e) => setInput(e.target.value)}></input>
         <p>Toggle search results by clicking the search bar</p>
         { display ?
-        <ul>
+        <ul className="search-results">
         {getData.map(movie => (
-            <li key={movie.id}>
+            <li className="movie-images" key={movie.id}>
                 <Badge badgeContent={movie.vote_average} color="primary"
             sx={{
               fontSize: 1.25,
             }}
             >
               </Badge>
-            {movie.poster_path ? <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} /> : <img src="https://via.placeholder.com/300x450" alt="placeholder" />}
+            {movie.poster_path ? <img className="movie-images" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} /> : <img src="https://via.placeholder.com/300x450" alt="placeholder" />}
             <h3>{movie.title}</h3>
             <p>{movie.overview}</p>
             <p>{movie.release_date}</p>
