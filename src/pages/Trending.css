@@ -9,8 +9,10 @@ p{
     box-shadow: 0 0 38px rgb(0 0 0 / 75%);
 
 }
-span{
+.MuiBadge-colorPrimary{
     font-size: 25px !important;
+    right: -12px !important;
+    height: 1.9rem !important;
 }
 
 .movie-images{
