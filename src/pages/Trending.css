@@ -12,11 +12,10 @@ p{
 span{
     font-size: 25px !important;
 }
-.css-106c1u2-MuiBadge-badge{
-    height: 31px !important;
-}
+
 .movie-images{
-    width: -webkit-fill-available;
+    width: 100%;
+    height: auto;
 }
 .trending{
     display: grid;
